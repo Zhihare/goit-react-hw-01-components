@@ -8,7 +8,6 @@ import data from './components/Statistics/data';
 import friends from './components/FriendList/friends';
 import transactions from './components/TransactionHistory/transactions';
 
-import css from './App.module.css'
 
 export const App = () => {
   return (

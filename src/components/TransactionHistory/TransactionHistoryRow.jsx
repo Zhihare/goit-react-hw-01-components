@@ -1,4 +1,4 @@
-import css from './TransactionHistory.module.css'
+
 
 export const TransactionHistoryRow = ({ type, amount, currency }) => {
 	return (
