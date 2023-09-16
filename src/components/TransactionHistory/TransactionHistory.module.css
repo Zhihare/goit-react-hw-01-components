@@ -1,0 +1,76 @@
+:root {
+	--c4: #9595b6;
+	--c3: #5a567f;
+
+	--name-color: rgb(44, 61, 78);
+	--background-color: #f6f3f3;
+	--shadow: rgba(143, 137, 137, 0.65);
+	--tag-color: #8b8888;
+}
+
+
+
+.transactionhistory {
+	background: var(--background-color);
+	border-collapse: collapse;
+	text-align: left;
+	width: 400px;
+	margin: 20px;
+	box-shadow: 3px 3px 5px -3px var(--shadow);
+	-webkit-box-shadow: 3px 3px 5px -3px var(--shadow);
+	-moz-box-shadow: 3px 3px 5px -3px var(--shadow);
+}
+
+.transactionhistory th {
+	border-top: 1px solid #777777;
+	border-bottom: 1px solid #777777;
+	box-shadow: inset 0 1px 0 #999999, inset 0 -1px 0 #999999;
+	background: linear-gradient(var(--c3), var(--c4));
+	color: white;
+	padding: 10px 15px;
+	position: relative;
+}
+
+.transactionhistory th:after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 25%;
+	height: 25%;
+	width: 100%;
+	background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .08));
+}
+
+.transactionhistory tr:nth-child(odd) {
+	background: #ebf3f9;
+}
+
+.transactionhistory th:first-child {
+	border-left: 1px solid #777777;
+	border-bottom: 1px solid #777777;
+	box-shadow: inset 1px 1px 0 #999999, inset 0 -1px 0 #999999;
+}
+
+.transactionhistory th:last-child {
+	border-right: 1px solid #777777;
+	border-bottom: 1px solid #777777;
+	box-shadow: inset -1px 1px 0 #999999, inset 0 -1px 0 #999999;
+}
+
+.transactionhistory td {
+	border: 1px solid #e3eef7;
+	padding: 10px 15px;
+	position: relative;
+	transition: all 0.5s ease;
+}
+
+.transactionhistory tbody:hover td {
+	color: transparent;
+	text-shadow: 0 0 3px #a09f9d;
+}
+
+.transactionhistory tbody:hover tr:hover td {
+	color: #444444;
+	text-shadow: none;
+}

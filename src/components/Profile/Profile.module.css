@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+
+:root {
+	--d: 15000ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: rgba(168, 239, 255, 1);
+	--c2: rgba(168, 239, 255, 0.1);
+
+	--name-color: rgb(44, 61, 78);
+	--background-color: #f6f3f3;
+	--shadow: rgba(143, 137, 137, 0.65);
+	--tag-color: #8b8888;
+}
+
+@property --angle {
+	syntax: '<angle>';
+	initial-value: 90deg;
+	inherits: true;
+}
+
+@property --gradX {
+	syntax: '<percentage>';
+	initial-value: 50%;
+	inherits: true;
+}
+
+@property --gradY {
+	syntax: '<percentage>';
+	initial-value: 0%;
+	inherits: true;
+}
+
+.profile {
+	background-color: var(--background-color);
+	box-shadow: 3px 3px 5px -3px var(--shadow);
+	-webkit-box-shadow: 3px 3px 5px -3px var(--shadow);
+	-moz-box-shadow: 3px 3px 5px -3px var(--shadow);
+	width: 212px;
+	margin: 20px;
+	border: 0.1rem solid;
+	border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
+
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
+}
+
+
+.description {
+	text-align: center;
+}
+
+.avatar {
+	border-radius: 200px 200px 200px 200px;
+	-webkit-border-radius: 200px 200px 200px 200px;
+	-moz-border-radius: 200px 200px 200px 200px;
+	border: 20px solid transparent;
+	margin-top: 10px;
+	width: 100%;
+	max-height: 250px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.name {
+	font-family: 'Merriweather', serif;
+
+	font-size: 18px;
+	color: var(--name-color);
+	margin-top: 10px;
+}
+
+.tag {
+	font-size: 14px;
+	margin-top: 8px;
+	color: var(--tag-color);
+}
+
+.location {
+	font-size: 14px;
+	margin-top: 4px;
+	color: var(--tag-color);
+}
+
+.stats {
+	width: 100%;
+	margin-bottom: 0;
+	display: grid;
+	grid-template-columns: 70px 70px 70px;
+	padding: 0;
+	justify-content: center;
+}
+
+.statsli {
+	height: 70px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	border: 0.1px solid #e9e5e4;
+
+}
+
+.label {
+	color: var(--tag-color);
+	font-size: 14px;
+}
+
+.quantity {
+	margin-top: 10px;
+	color: #131313;
+	font-size: 16px;
+}
