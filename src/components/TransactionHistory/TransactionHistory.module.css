@@ -3,7 +3,6 @@
 	--c3: #5a567f;
 
 	--name-color: rgb(44, 61, 78);
-	--background-color: #f6f3f3;
 	--shadow: rgba(143, 137, 137, 0.65);
 	--tag-color: #8b8888;
 }
@@ -14,8 +13,9 @@
 	background: var(--background-color);
 	border-collapse: collapse;
 	text-align: left;
-	width: 400px;
-	margin: 20px;
+	width: 70%;
+	margin-top: 40px;
+
 	box-shadow: 3px 3px 5px -3px var(--shadow);
 	-webkit-box-shadow: 3px 3px 5px -3px var(--shadow);
 	-moz-box-shadow: 3px 3px 5px -3px var(--shadow);

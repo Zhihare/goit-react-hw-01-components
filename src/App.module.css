@@ -1,0 +1,15 @@
+.container {
+	padding: 20px;
+	width: 1200px;
+	display: flex;
+	gap: 30px;
+}
+
+.leftSection {
+
+	width: 400px;
+}
+
+.rightSection {
+	width: 800px;
+}
