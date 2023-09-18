@@ -2,10 +2,10 @@ import { StatisticItem } from './StatisticItem'
 import css from './Statistics.module.css'
 
 
-export const Statistics = ({ stats }) => {
+export const Statistics = ({ title, stats }) => {
 	return (
 		<section className={css.statistics}>
-			<h2 className={css.title}>Upload stats</h2>
+			<h2 className={css.title}>{title ? title : 'Upload stats'}</h2>
 			<ul className={css.statlist}>
 				{stats.map(item => {
 
